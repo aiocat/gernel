@@ -1,6 +1,7 @@
 logs/
 autoexec/
 workspace/
+build/
 injector.dll
 krnl.dll
 *.exe

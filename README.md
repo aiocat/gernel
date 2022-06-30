@@ -6,7 +6,7 @@
 -->
 
 # Gernel
-![UI](https://cdn.discordapp.com/attachments/689482997971288104/992126852263055471/unknown.png)
+![UI](https://cdn.discordapp.com/attachments/987785315102109799/992139525176447036/unknown.png)
 
 Gernel is a flexible UI for Krnl, allows you to customize anything with powerful web-based UI.
 

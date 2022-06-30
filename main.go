@@ -6,6 +6,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 
 	"github.com/gofiber/fiber/v2"
@@ -29,5 +30,6 @@ func main() {
 	app.Static("/", ".\\web\\static")
 	app.Static("/scripts", ".\\scripts")
 
-	log.Fatal(app.Listen(":3000"))
+	fmt.Println("Gernel is loaded, visit: http://127.0.0.1:42069 to start using.")
+	log.Fatal(app.Listen(":42069"))
 }
