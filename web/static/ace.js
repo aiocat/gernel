@@ -66,5 +66,19 @@ const setEditor = () => {
   }
 };
 
+const saveFile = () => {
+  let luaBlob = new Blob([editors[currentTab].getValue()], {
+    type: "text/lua",
+  });
+  let blank = document.createElement("a");
+  blank.download = "unknown.lua";
+  blank.href = URL.createObjectURL(luaBlob);
+
+  document.body.appendChild(blank);
+  blank.dispatchEvent(new MouseEvent("click"));
+  blank.remove();
+  URL.revokeObjectURL(luaBlob);
+};
+
 addTab();
 document.getElementById("add-tab").onclick = addTab;
