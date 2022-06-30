@@ -183,6 +183,11 @@ button {
   margin-bottom: 5px;
 }
 
+#scripts button:hover {
+  background: #6c7086;
+  color: #181825;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
