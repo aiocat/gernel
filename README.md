@@ -14,3 +14,9 @@ Gernel is a flexible UI for Krnl, allows you to customize anything with powerful
 Gernel does not using official Krnl API, instead using a dynamic library version of [CKrnl](https://github.com/aiocat/ckrnl)
 
 Gernel server and wrapper is written in Go, front-end is written in Pure HTML, CSS, JS.
+
+## Download
+You can download the latest release from [here](https://github.com/aiocat/gernel/releases/latest)
+
+## License
+Gernel is distributed under the MIT license.
