@@ -3,6 +3,9 @@
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 
+const normalTitle = "Gernel v0.1.0";
+document.title = normalTitle;
+
 const inject = async () =>
   await fetch("/inject", {
     method: "GET",
@@ -24,3 +27,12 @@ const getScript = async (name) =>
     method: "POST",
     body: name,
   });
+
+setInterval(async () => {
+  let result = await (await fetch("/injected", { method: "GET" })).text();
+  if (result == "1") {
+    document.title = `${normalTitle} [INJECTED]`;
+  } else {
+    document.title = `${normalTitle} [WAITING]`;
+  }
+}, 100);

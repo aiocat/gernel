@@ -26,6 +26,14 @@ func ExecuteRoute(ctx *fiber.Ctx) error {
 	return ctx.SendStatus(204)
 }
 
+func IsInjectedRoute(ctx *fiber.Ctx) error {
+	if KRNL.IsInjected() {
+		return ctx.Status(200).SendString("1")
+	} else {
+		return ctx.Status(200).SendString("0")
+	}
+}
+
 func AllScriptsRoute(ctx *fiber.Ctx) error {
 	list, err := os.ReadDir(".\\scripts")
 

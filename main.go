@@ -21,6 +21,7 @@ func main() {
 
 	app.Get("/", RootRoute)
 	app.Get("/inject", InjectRoute)
+	app.Get("/injected", IsInjectedRoute)
 	app.Get("/scripts", AllScriptsRoute)
 	app.Post("/scripts", ScriptRoute)
 	app.Post("/execute", ExecuteRoute)
