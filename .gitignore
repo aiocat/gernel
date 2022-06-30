@@ -1,0 +1,6 @@
+logs/
+autoexec/
+workspace/
+injector.dll
+krnl.dll
+*.exe

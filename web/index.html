@@ -1,0 +1,72 @@
+<!--
+ Copyright (c) 2022 aiocat
+ 
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.7.0/ace.js"
+      integrity="sha512-qo1DTeyS17ZN2IiPQASa+Y4AYngEk7KClTQM/yepM4+gnln/vRbVdHN58lXj+nM0HXmlAKzGQN6rqrEjJybZaw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.7.0/mode-lua.min.js"
+      integrity="sha512-1FRYEFZJW+iKT+sbGRqj+GKs/BXfhFPMmEaOyksw5S4VcZEDY6tSn4/f9CsQ9fX+KYXWhPRqvuHzCLk8B+k8Yg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.7.0/worker-lua.min.js"
+      integrity="sha512-DtDSOFFejsEHVK0fIKT4LE+6RGTGJCyoEVU3Ta2Jk21qRF+GgzUZ+2ucF7ErNTK0A8c8NMmM2LLm+F87hVTZLw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.7.0/snippets/lua.min.js"
+      integrity="sha512-Q2rANYT60bpljXiPx2Gc02A+Mhwx9vXFcDkOFqEh8VoYUj2Av4X3B0K783TxNq4EvIpqewhzbSJ8dbU81sbrQQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.7.1/theme-dracula.min.js"
+      integrity="sha512-spJzhyfxwWqVa1Tab7js2JKLQD6V5Q1Bsd5QQCJ14b7uw4bOoIPSvR9skHgHNuf2c9AIWR28EzhqvCuc24hUnA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Gernel v0.1.0</title>
+  </head>
+
+  <body>
+    <h1 class="title">Gernel v0.1.0</h1>
+    <div class="flex">
+      <div id="tabs">
+        <button class="tab" id="add-tab">Add</button>
+      </div>
+      <div id="line"></div>
+      <span id="editor-zone">
+      </span>
+      <div id="line"></div>
+      <div id="scripts"></div>
+    </div>
+
+    <div class="bottom">
+      <button onclick="inject()">Inject</button>
+      <button onclick="execute()">Execute</button>
+      <button onclick="loadScripts()">Refresh Scripts</button>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="ace.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
